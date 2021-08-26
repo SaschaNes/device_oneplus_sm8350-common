@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
      Copyright (C) 2014-2015 The CyanogenMod Project
      Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2021 The DotOS Project
+     Copyright (C) 2018 The Xiaomi-SDM660 Project
+     Copyright (C) 2018-2021 crDroid Android Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -12,10 +17,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.evolution.device.DeviceExtras"
+    package="org.dot.device.DeviceExtras"
     android:sharedUserId="android.uid.system"
-    android:versionCode="3"
-    android:versionName="3.0">
+    android:versionCode="4"
+    android:versionName="4.0">
 
     <uses-permission android:name="android.permission.INJECT_EVENTS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -24,8 +29,8 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="org.evolution.device.DeviceExtras.UPDATE_SLIDER_SETTINGS" />
-    <protected-broadcast android:name="org.evolution.device.DeviceExtras.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.dot.device.DeviceExtras.UPDATE_SLIDER_POSITION" />
+    <protected-broadcast android:name="org.dot.device.DeviceExtras.UPDATE_SLIDER_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -152,6 +157,18 @@
             </intent-filter>
         </service>
 
+        <!-- Game Mode  Tile -->
+        <service
+            android:name=".GameModeTileService"
+            android:icon="@drawable/ic_game_mode"
+            android:label="@string/game_mode_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
          <!-- KCalSettings Activity -->
         <activity
             android:name=".kcal.KCalSettingsActivity"
@@ -190,7 +207,7 @@
         <!-- Search indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.evolution.device"
+            android:authorities="org.dot.device"
             android:exported="true"
             android:grantUriPermissions="true"
             android:multiprocess="false"

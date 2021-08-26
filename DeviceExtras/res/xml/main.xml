@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2014-2016 The OmniROM Project
+<!--
+     Copyright (C) 2014-2016 The OmniROM Project
+     Copyright (C) 2021 The DotOS Project
+     Copyright (C) 2018 The Xiaomi-SDM660 Project
+     Copyright (C) 2018-2021 crDroid Android Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,7 +16,7 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:settings="http://schemas.android.com/apk/res/org.evolution.device.DeviceExtras">
+	xmlns:settings="http://schemas.android.com/apk/res/org.dot.device.DeviceExtras">
 
     <PreferenceCategory
         android:key="slider"
@@ -59,7 +64,7 @@
             android:summary="@string/ambient_display_gestures_summary"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetClass="org.evolution.device.DeviceExtras.DozeSettingsActivity" />
+                    android:targetClass="org.dot.device.DeviceExtras.DozeSettingsActivity" />
         </Preference>
 
         <Preference
@@ -70,8 +75,8 @@
             android:summary="@string/kcal_enabled_summary">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="org.evolution.device.DeviceExtras.kcal.KCalSettingsActivity"
-                android:targetPackage="org.evolution.device.DeviceExtras.kcal" />
+                android:targetClass="org.dot.device.DeviceExtras.kcal.KCalSettingsActivity"
+                android:targetPackage="org.dot.device.DeviceExtras.kcal" />
        </Preference>
 
         <SwitchPreference
@@ -100,7 +105,7 @@
             android:title="@string/auto_hbm_title"
             android:summary="@string/auto_hbm_summary" />
 
-        <org.evolution.device.DeviceExtras.AutoHBMThresholdPreference
+        <org.dot.device.DeviceExtras.AutoHBMThresholdPreference
             android:key="auto_hbm_threshold"
             android:icon="@drawable/ic_autohbm_threshold"
             android:title="@string/auto_hbm_threshold_title"
@@ -109,6 +114,22 @@
         <Preference
             android:icon="@drawable/ic_info_outline"
             android:summary="@string/hbm_mode_warning" 
+            android:persistent="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="touchscreen"
+        android:title="@string/touchscreen_title">
+
+        <SwitchPreference
+            android:key="game_mode"
+            android:icon="@drawable/ic_game_mode"
+            android:summary="@string/game_mode_summary"
+            android:title="@string/game_mode_title" />
+
+        <Preference
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/game_mode_warning" 
             android:persistent="false" />
     </PreferenceCategory>
 
@@ -127,7 +148,7 @@
         android:key="vibrator"
         android:title="@string/category_vibrator">
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:key="vib_strength"
             android:icon="@drawable/ic_vibration"
             android:title="@string/vib_strength_title_head"

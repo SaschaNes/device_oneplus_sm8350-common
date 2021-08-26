@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (C) 2018 The Xiaomi-SDM660 Project
+     Copyright (C) 2021 DotOS Project
+
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -28,25 +30,28 @@
         android:key="cat_colormanagement"
         android:title="@string/cat_colormanagement">
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference 
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference 
             android:defaultValue="256"
             android:dependency="kcal_enabled"
             android:key="color_red"
             android:max="256"
+            android:icon="@drawable/ic_r"
             android:title="@string/color_red" />
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:defaultValue="256"
             android:dependency="kcal_enabled"
             android:key="color_green"
             android:max="256"
+            android:icon="@drawable/ic_g"
             android:title="@string/color_green" />
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:defaultValue="256"
             android:dependency="kcal_enabled"
             android:key="color_blue"
             android:max="256"
+            android:icon="@drawable/ic_b"
             android:title="@string/color_blue" />
 
     </PreferenceCategory>
@@ -55,32 +60,36 @@
         android:key="cat_calibration"
         android:title="@string/cat_calibration">
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:defaultValue="127"
             android:dependency="kcal_enabled"
             android:key="saturation"
             android:max="255"
+            android:icon="@drawable/ic_s"
             android:title="@string/saturation" />
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:defaultValue="127"
             android:dependency="kcal_enabled"
             android:key="value"
             android:max="255"
+            android:icon="@drawable/ic_v"
             android:title="@string/value" />
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:defaultValue="127"
             android:dependency="kcal_enabled"
             android:key="contrast"
             android:max="255"
+            android:icon="@drawable/ic_c"
             android:title="@string/contrast" />
 
-        <org.evolution.device.DeviceExtras.CustomSeekBarPreference
+        <org.dot.device.DeviceExtras.CustomSeekBarPreference
             android:defaultValue="0"
             android:dependency="kcal_enabled"
             android:key="hue"
             android:max="1536"
+            android:icon="@drawable/ic_h"
             android:title="@string/hue" />
 
     </PreferenceCategory>
