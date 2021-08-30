@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (c) 2021 The DotOS project
+    Copyright (c) 2021 The Evolution X project
     Copyright (C) 2018-2021 crDroid Android Project
-
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -14,9 +13,6 @@
     limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <!-- Whether device supports 240Hz sample rate -->
-    <bool name="config_deviceSupportsHighSampleRate">true</bool>
 
     <!-- The default usage of slider -->
     <string name="config_defaultNotificationSliderUsage" translatable="false">6</string>
@@ -62,4 +58,7 @@
         <item>64</item>
         <item>63</item>
     </string-array>
+
+    <!-- Whether device supports 240Hz sample rate -->
+    <bool name="config_deviceSupportsHighSampleRate">true</bool>
 </resources>
